@@ -1,0 +1,308 @@
+<?php
+if (isset($_POST['submit'])){
+$a = $_POST['teller'];
+	$b= $_POST['dop'];
+	$c= $_POST['mop'];
+	$d= $_POST['yop'];
+	$e= $b.'-'.$c.'-'.$d;
+	$f= $_POST['branch'];
+	$g= $_POST['fname'];
+	$h= $_POST['mname'];
+	$i= $_POST['lname'];
+	$j= $g. ' '. $h. ' '.$i;
+	$k= $_POST['dob'];
+	$l= $_POST['mob'];
+	$m= $_POST['yob'];
+	$n= $_POST['ms'];
+	$o= $k. '-'. $l. '-' .$m. '-' .$n;
+	
+echo $a.'<p>';
+echo $e. '<p>';
+	echo $f. '<P>'; 
+	echo $j. '<p>';
+	echo $o;
+
+
+}
+
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MISS 042 PEGENT</title>
+</head>
+
+<body>
+	<table  width="100%" height="100" bgcolor="white">
+<tr align="center">
+	<td width="100"> <font size="+3" color="#3D3BD1" font style="Tahoma">MISS 042 PEGENT</font></td>
+</tr>
+	
+</table>
+
+	<table width="1200" align="center">
+		<tr>
+			<td> Registration Step1
+			<hr style="color: red">
+			
+			</td>
+			
+		</tr>
+	</table>
+	
+	<table width="1200" align="center">
+		<tr>
+			<td>
+					<form method="post" action="" enctype="multipart/form-data">
+	<table width="100%">
+	<tr>
+		<td width="12%">Bank Teller No</td>
+		<td width="20%"><input type="text" size="30" maxlength="10" name="teller"></td>
+		<td width="15%"> Date of Payment </td>
+		<td width="10%">Day: <select name="dop">
+    <option selected="selected">1</option>  <option>2</option>  <option>3</option>
+  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>
+  <option>8</option>  <option>9</option>  <option>10</option>  <option>11</option>
+  <option>12</option>  <option>13</option>  <option>14</option>  <option>15</option>
+  <option>16</option>  <option>17</option>  <option>18</option>  <option>19</option>
+  <option>20</option>  <option>21</option>  <option>22</option>  <option>23</option>
+  <option>24</option>  <option>25</option>  <option>26</option>  <option>27</option>
+  <option>28</option>  <option>29</option>  <option>30</option>  <option>31</option>
+  </select></td>
+  
+ 	 <td width="15%">Month:<select name="mop">
+  <option selected="selected">January</option>
+  <option>February</option>
+  <option>March</option>
+  <option>April</option>
+  <option>May</option>
+  <option>June</option>
+  <option>July</option>
+  <option>August</option>
+  <option>September</option>
+  <option>October</option>
+  <option>November</option>
+  <option>December</option>
+  </select> </td>
+		
+		<td> Year:<select name="yop">
+		      	<option selected>2011</option>
+		      	<option selected>2012</option>
+		      	<option selected>2013</option>
+		      	<option selected>2014</option>
+		      	<option selected>2015</option>
+		      	<option selected>2016</option>
+		      	<option selected>2017</option>
+		      	<option selected>2018</option>
+		      	<option selected>2019</option>
+		      	<option selected>2020</option>
+		      	<option selected>2021</option>
+		      	<option selected>2022</option>
+		      	
+		      	
+		      </select> </td>
+		
+	</tr>
+	</table>
+	
+	
+	<table width="100%"> 
+		<tr>
+			<td width="12%">Branch:  </td> 
+			<td > <input type="text" size="80" maxlength="10" name="branch"></td>	
+			
+		</tr>
+	</table>
+	
+	
+	<table width="100%">
+		<tr>
+			<td width="12%">First Name: </td>
+			<td width="20%"> <input type="text" size="30" maxlength="10" name="fname"></td>
+		<td width="15%"> Middle Name: </td>
+		<td width="20%"> <input type="text" size="30" maxlength="10" name="mname"></td>
+		<td width="15%">Last Name:</td>
+		<td> <input type="text" size="30" maxlength="10" name="lname"></td>
+	
+		</tr>
+	</table>
+	
+	
+	
+	<table width="100%">
+		<tr>
+		
+			<td width="12%">Date of birth: </td>
+			<td width="3%">Day:</td>
+			<td width="8%">
+			<select name="dob">
+    <option selected="selected">1</option>  <option>2</option>  <option>3</option>
+  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>
+  <option>8</option>  <option>9</option>  <option>10</option>  <option>11</option>
+  <option>12</option>  <option>13</option>  <option>14</option>  <option>15</option>
+  <option>16</option>  <option>17</option>  <option>18</option>  <option>19</option>
+  <option>20</option>  <option>21</option>  <option>22</option>  <option>23</option>
+  <option>24</option>  <option>25</option>  <option>26</option>  <option>27</option>
+  <option>28</option>  <option>29</option>  <option>30</option>  <option>31</option>
+  </select>
+  </td>
+  <td width="3%">Month: </td>
+  <td width="10%">
+  <select name="mob">
+  <option selected="selected">January</option>
+  <option>February</option>
+  <option>March</option>
+  <option>April</option>
+  <option>May</option>
+  <option>June</option>
+  <option>July</option>
+  <option>August</option>
+  <option>September</option>
+  <option>October</option>
+  <option>November</option>
+  <option>December</option>
+  </select>
+  </td>
+  <td width="3%"> Year:</td>
+  <td width="15%">
+  <select name="yob">
+    <option selected="selected">1980</option>  <option>1981</option>  <option>1982</option>
+  <option>1983</option>  <option>1984</option>  <option>1985</option>  <option>1986</option>
+  <option>1987</option>  <option>1988</option>  <option>1989</option>  <option>1990</option>
+  <option>1991</option>  <option>1992</option>  <option>1993</option>  <option>1994</option>
+  <option>1995</option>  <option>1996</option>  <option>1997</option>  <option>1998</option>
+  <option>1999</option>  <option>2000</option>  <option>2001</option>  <option>2002</option>
+  <option>2003</option>  <option>2004</option>  <option>2005</option>  <option>2006</option>
+  <option>2007</option>  <option>2008</option>  <option>2009</option>  <option>2010</option>
+  <option>2011</option>  </select>
+  </td> 
+  <td width="10%">Marital Status:</td>
+  <td> 
+ <select name="ms">
+ <option>
+ 		-Please Select
+ 	</option>
+ 	<option>
+ 		Male
+ 	</option>
+ 	<option>Female</option>
+ 	
+ </select>
+  </td>
+		</tr>
+	</table>
+	
+	
+	<table width="100%">
+		<tr>
+			<td width="12%">Contact Address</td>
+			<td><input type="text" size="60"></td>
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td width="12%">Contact Address2 </td>
+			<td><input type="text" size="60"></td>
+		</tr>
+	</table>
+	
+	<table width="100%">
+		<tr>
+			<td width="12%">State of Origin</td>
+			<td><input type="text"></td>
+	
+			
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+		<td>Registrattion Step2 <hr style="color: red"></td>
+			
+		</tr>
+	</table>
+	
+	
+	<table>
+		<tr><td>Guardian/Next Of Kin:</td>
+			<td><input type="text"></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>Relationship to Guardian/Next of Kin:</td>
+			<td><input type="text"></td>
+			<td>Occupation:</td>
+			<td><input type="text"></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>Address Of Guardian/Next of Kin:</td>
+			<td><input type="text"></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>Phone No. Of Guardian/Next of Kin:</td>
+			<td><input type="tex"></td> 
+			 
+			
+		</tr>
+	</table>
+	
+	
+	<table width="100%">
+		<tr>
+			<td> Resgistration Step3 <hr style="color: red"></td> 
+			
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>Tell us about yourself in less than 200 words</td>
+	
+		</tr>
+	</table>
+	<table>
+		<tr>
+			
+			<textarea rows="10" cols="50"></textarea>
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td>Registration Step4 <hr style="color: red"></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td><input type="radio"> I agree that all the information provided above is accurate. I have read and understood the rules and regulations set forth by the Miss 042 Pageant committee and agree to abide by them.
+I further agree to abide by the rules regulation set forth the Miss 042 Pageant committee. I will accept the decision of the judges as final and binding, and I understand that such decisions are not questionable.
+
+I hereby consent that the organisers of the Miss 042 Pageant reserve the right to use all information; person or general, text, images submitted by me before or during the pageant in any medium, print or electronic in the advancement of The Miss 042 Pageant.
+
+</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td><input type="submit" value="Submit" name="submit"> 
+			<input type="reset" value="Reset"></td>
+	
+		</tr>
+	</table>
+	<hr>
+	<table>
+		<tr>
+			<td align="center"> <strong><font color="blue">Powered By STUDIO 042</font></strong></td>
+		</tr>
+	</table>
+</form>
+			</td>
+		</tr>
+	</table>
+</body>
+
+
+</html>
