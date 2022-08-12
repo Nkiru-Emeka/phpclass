@@ -302,6 +302,8 @@ I hereby consent that the organisers of the Miss 042 Pageant reserve the right t
 			</td>
 		</tr>
 	</table>
+	<?php
+	require ("array.php")?>
 </body>
 
 
