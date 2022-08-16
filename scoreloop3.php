@@ -1,9 +1,12 @@
 <?php 
 $name= array('Vin', 'Gozie', 'Amara', 'Favou');
-$score= array(81,75,70,90);
+$english= array(81,75,70,90);
+$maths= array(50,89,70,20);
+$igbo= array(20,30,59,70);
+
 $count= count($name);
 $sn=1;
-$subject= array("English", "Maths", "Agric", "Igbo");
+$subject= array(100,40,70,65);
 $number= count($subject);
 
 ?>
@@ -12,7 +15,7 @@ $number= count($subject);
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Students Exam</title>
 </head>
 
 <body>
@@ -20,11 +23,10 @@ $number= count($subject);
 		<tr>
 			<td width="113">S/N</td>
 			<td width="113">Name</td>
-			<td width="377">Score</td>
-			<td width="377">State</td>
+			<td width="377">English</td>
 			<td width="377">Maths</td>
-			<td width="377">Agric</td>
 			<td width="377">Igbo</td>
+			
 			<td width="377">Avg</td>
 		
 		</tr>
@@ -32,7 +34,8 @@ $number= count($subject);
 		<tr>
 			<td width="113"><?php echo $sn++ ?></td>
 			<td width="113"><?php echo $name[$a]; ?></td>
-			<td width="377"><?php echo $score[$a]; ?></td>
+			<td width="377"><?php echo $english[$a]; ?></td>
+			<td width="377"><?php echo $maths[$a]; ?></td>
 			<td width="377"><?php echo $subject[$a]; ?></td>
 		</tr>
 		<?php }?>	
