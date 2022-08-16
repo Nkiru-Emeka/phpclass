@@ -22,6 +22,10 @@ $number= count($subject);
 			<td width="113">Name</td>
 			<td width="377">Score</td>
 			<td width="377">State</td>
+			<td width="377">Maths</td>
+			<td width="377">Agric</td>
+			<td width="377">Igbo</td>
+			<td width="377">Avg</td>
 		
 		</tr>
 		<?php for($a=0; $a<$count;$a++) {?>
