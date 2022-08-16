@@ -8,6 +8,9 @@ $count= count($name);
 $sn=1;
 $subject= array(100,40,70,65);
 $number= count($subject);
+$grade= 70;
+
+
 
 ?>
 
@@ -28,6 +31,7 @@ $number= count($subject);
 			<td width="377">Igbo</td>
 			
 			<td width="377">Avg</td>
+			<td width="377">Grade</td>
 		
 		</tr>
 		<?php for($a=0; $a<$count;$a++) {?>
@@ -40,7 +44,13 @@ $number= count($subject);
 		</tr>
 		<?php }?>	
 </table>
-	
+	<?php for($grade=70; $grade<=100; $grade++){
+		{ echo 'A';}
+		elseif($grade>=60){ echo 'B';}
+		elseif($grade>=50){ echo 'C';}
+		elseif($grade>=45){ echo 'D';}
+		else{echo'F';}
+	}
 
 	 <form action="" method="post">
 		 <select>
