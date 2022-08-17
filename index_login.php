@@ -1,11 +1,27 @@
 <?php 
+$uname= $_POST['uname'];
+$pass= $_POST['pass'];
+$error= " ";
+$success= " ";
+
+
 if (isset($_POST['submit'])){
-    $a  $_POST['username'];
-    $b= $_POST['password'];
-    
-    
-    
+    if ($uname== "admin");{
+        if($pass== "password"){
+            $error= "";
+            $success= "Welcome Admin";
+           }
+            else{
+                $error= "";
+                $success= "Welcome Admin";
+}
     }
+    }
+
+
+    
+    
+    
     
 
 ?>
@@ -19,13 +35,17 @@ if (isset($_POST['submit'])){
 
 <body>
 	
-        <table>
+       /../ <table>
             <tr>
                 <td>
                 <form method="post" action="" enctype="multipart/form-data">
+                <td width="12%">Username</td>
+		<td width="20%"><input type="text" size="30" maxlength="10" name="username"></td>
+		<td width="15%"> Password </td>
+		<td width="10%">Day: <select name="password">
                 </td>
             </tr>
-        </table>
+        </table>/../
  
 
 </body>
