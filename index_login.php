@@ -1,28 +1,23 @@
 <?php 
-$uname= $_POST['uname'];
-$pass= $_POST['pass'];
-$error= " ";
-$success= " ";
 
 
-if (isset($_POST['submit'])){
+
+
+
+if (isset($_POST['login'])){
+    $uname = $_POST["uname"];
+$pass = $_POST["pass"];
+
     if ($uname== "admin");{
         if($pass== "password"){
-            $error= "";
-            $success= "Welcome Admin";
+           
            }
             else{
-                $error= "";
+               
                 $success= "Welcome Admin";
 }
     }
     }
-
-
-    
-    
-    
-    
 
 ?>
 
@@ -34,19 +29,14 @@ if (isset($_POST['submit'])){
 </head>
 
 <body>
-	
-       /../ <table>
-            <tr>
-                <td>
-                <form method="post" action="" enctype="multipart/form-data">
-                <td width="12%">Username</td>
-		<td width="20%"><input type="text" size="30" maxlength="10" name="username"></td>
-		<td width="15%"> Password </td>
-		<td width="10%">Day: <select name="password">
-                </td>
-            </tr>
-        </table>/../
- 
-
+    
+    <form method='post'>
+            <div class="form-input">
+        <input type="text" name = "uname" value="uname" Placeholder= " Enter Username" required><br/>
+    <input type ="password" name ="pass" value="uname"  Placeholder=" Enter Password" required><br/>
+    <input type= "submit" name= "submit" value ="Login" required><br/>
+</div>
+   </form>
+    	
 </body>
 </html>
