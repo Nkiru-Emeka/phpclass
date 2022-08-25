@@ -1,22 +1,17 @@
 <?php 
 
+$msg ="";
 
 
 
-
-if (isset($_POST['login'])){
+if (isset($_POST['submit'])){
     $uname = $_POST["uname"];
-$pass = $_POST["pass"];
-
-    if ($uname== "admin");{
-        if($pass== "password"){
-           
-           }
-            else{
-               
-                $success= "Welcome Admin";
-}
-    }
+    $pass = $_POST["pass"];
+    if ($uname== "admin" && $pass== "password"){
+                $msg= "Welcome Admin";
+             }else{
+                $msg= "failed";
+             }
     }
 
 ?>
