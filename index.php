@@ -1,28 +1,33 @@
 <?php
+include ("connect.php");
 if (isset($_POST['submit'])){
 $a = $_POST['teller'];
 	$b= $_POST['dop'];
-	$c= $_POST['mop'];
-	$d= $_POST['yop'];
-	$e= $b.'-'.$c.'-'.$d;
-	$f= $_POST['branch'];
-	$g= $_POST['fname'];
-	$h= $_POST['mname'];
-	$i= $_POST['lname'];
-	$j= $g. ' '. $h. ' '.$i;
-	$k= $_POST['dob'];
-	$l= $_POST['mob'];
-	$m= $_POST['yob'];
-	$n= $_POST['ms'];
-	$o= $k. '-'. $l. '-' .$m. '-' .$n;
+	$c= $_POST['bankname'];
+	$d= $_POST['firstname'];
+	$e= $_POST['middlename'];
+	$f= $_POST['lastname'];
+	$g= $_POST['dob'];
+	$h= $_POST['mstatus'];
+	$i= $_POST['address1'];
+	$j= $_POST['address2'];
+	$k= $_POST['state'];
+	$l= $_POST['nok'];
+	$m= $_POST['nokr'];
+	$n= $_POST['occupation'];
+	$o= $_POST['address_nok'];
+	$p= $_POST['phone_nok'];
+	$q= $_POST['about'];
+	$r= $_POST['agree'];
 	
-echo $a.'<p>';
-echo $e. '<p>';
-	echo $f. '<P>'; 
-	echo $j. '<p>';
-	echo $o;
 
-
+	$insert= mysqli_query($connect, "insert into pegant 
+    (teller, dop, bankname, firstname, middlename, lastname, dob, mstatus, address1, address2, state, nok, 
+	nokr, occupation, address_nok, phone_nok, about, agree, date)
+    values ('$a', '$b', '$c', '$d', '$e', '$f', '$g', '$h', '$i', '$j', '$k', 
+	'$l', '$m', '$n', '$o', '$p', '$q', '$r', now())") or die ('could mot 
+    insert'.mysqli_error($connect));
+    if($insert) {echo 'succeful';}
 }
 
 ?>
@@ -58,50 +63,14 @@ echo $e. '<p>';
 	<table width="100%">
 	<tr>
 		<td width="12%">Bank Teller No</td>
-		<td width="20%"><input type="text" size="30" maxlength="10" name="teller"></td>
+		<td width="20%"><input type="text" size="30" name="teller" value="<?php if(isset($a)) echo $a ?>"></td>
 		<td width="15%"> Date of Payment </td>
-		<td width="10%">Day: <select name="dop">
-    <option selected="selected">1</option>  <option>2</option>  <option>3</option>
-  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>
-  <option>8</option>  <option>9</option>  <option>10</option>  <option>11</option>
-  <option>12</option>  <option>13</option>  <option>14</option>  <option>15</option>
-  <option>16</option>  <option>17</option>  <option>18</option>  <option>19</option>
-  <option>20</option>  <option>21</option>  <option>22</option>  <option>23</option>
-  <option>24</option>  <option>25</option>  <option>26</option>  <option>27</option>
-  <option>28</option>  <option>29</option>  <option>30</option>  <option>31</option>
-  </select></td>
-  
- 	 <td width="15%">Month:<select name="mop">
-  <option selected="selected">January</option>
-  <option>February</option>
-  <option>March</option>
-  <option>April</option>
-  <option>May</option>
-  <option>June</option>
-  <option>July</option>
-  <option>August</option>
-  <option>September</option>
-  <option>October</option>
-  <option>November</option>
-  <option>December</option>
-  </select> </td>
+		<td> <input type="date" name="dop"></td>
 		
-		<td> Year:<select name="yop">
-		      	<option selected>2011</option>
-		      	<option selected>2012</option>
-		      	<option selected>2013</option>
-		      	<option selected>2014</option>
-		      	<option selected>2015</option>
-		      	<option selected>2016</option>
-		      	<option selected>2017</option>
-		      	<option selected>2018</option>
-		      	<option selected>2019</option>
-		      	<option selected>2020</option>
-		      	<option selected>2021</option>
-		      	<option selected>2022</option>
-		      	
-		      	
-		      </select> </td>
+  
+ 	 <td width="15%"></td>
+		
+		<td> </td>
 		
 	</tr>
 	</table>
@@ -110,7 +79,7 @@ echo $e. '<p>';
 	<table width="100%"> 
 		<tr>
 			<td width="12%">Branch:  </td> 
-			<td > <input type="text" size="80" maxlength="10" name="branch"></td>	
+			<td > <input type="text" size="80" name="bankname" value= "<?php if(isset($c)) echo $c ?>"></td>	
 			
 		</tr>
 	</table>
@@ -119,11 +88,11 @@ echo $e. '<p>';
 	<table width="100%">
 		<tr>
 			<td width="12%">First Name: </td>
-			<td width="20%"> <input type="text" size="30" maxlength="10" name="fname"></td>
+			<td width="20%"> <input type="text" size="30" maxlength="10" name="firstname" value= "<?php if(isset($d)) echo $d ?>"></td>
 		<td width="15%"> Middle Name: </td>
-		<td width="20%"> <input type="text" size="30" maxlength="10" name="mname"></td>
-		<td width="15%">Last Name:</td>
-		<td> <input type="text" size="30" maxlength="10" name="lname"></td>
+		<td width="20%"> <input type="text" size="30" maxlength="10" name="middlename" value= "<?php if(isset($e)) echo $e ?>"></td>
+		<td width="15%">Last Name:</td> 
+		<td> <input type="text" size="30" maxlength="10" name="lastname" value= "<?php if(isset($f)) echo $f?>"></td>
 	
 		</tr>
 	</table>
@@ -134,59 +103,29 @@ echo $e. '<p>';
 		<tr>
 		
 			<td width="12%">Date of birth: </td>
-			<td width="3%">Day:</td>
+			<td width="3%"></td>
 			<td width="8%">
-			<select name="dob">
-    <option selected="selected">1</option>  <option>2</option>  <option>3</option>
-  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>
-  <option>8</option>  <option>9</option>  <option>10</option>  <option>11</option>
-  <option>12</option>  <option>13</option>  <option>14</option>  <option>15</option>
-  <option>16</option>  <option>17</option>  <option>18</option>  <option>19</option>
-  <option>20</option>  <option>21</option>  <option>22</option>  <option>23</option>
-  <option>24</option>  <option>25</option>  <option>26</option>  <option>27</option>
-  <option>28</option>  <option>29</option>  <option>30</option>  <option>31</option>
-  </select>
+			<input type="date" name="dob">
   </td>
-  <td width="3%">Month: </td>
+  <td width="3%"></td>
   <td width="10%">
-  <select name="mob">
-  <option selected="selected">January</option>
-  <option>February</option>
-  <option>March</option>
-  <option>April</option>
-  <option>May</option>
-  <option>June</option>
-  <option>July</option>
-  <option>August</option>
-  <option>September</option>
-  <option>October</option>
-  <option>November</option>
-  <option>December</option>
-  </select>
   </td>
-  <td width="3%"> Year:</td>
+  <td width="3%"> </td>
   <td width="15%">
-  <select name="yob">
-    <option selected="selected">1980</option>  <option>1981</option>  <option>1982</option>
-  <option>1983</option>  <option>1984</option>  <option>1985</option>  <option>1986</option>
-  <option>1987</option>  <option>1988</option>  <option>1989</option>  <option>1990</option>
-  <option>1991</option>  <option>1992</option>  <option>1993</option>  <option>1994</option>
-  <option>1995</option>  <option>1996</option>  <option>1997</option>  <option>1998</option>
-  <option>1999</option>  <option>2000</option>  <option>2001</option>  <option>2002</option>
-  <option>2003</option>  <option>2004</option>  <option>2005</option>  <option>2006</option>
-  <option>2007</option>  <option>2008</option>  <option>2009</option>  <option>2010</option>
-  <option>2011</option>  </select>
-  </td> 
+    </td> 
   <td width="10%">Marital Status:</td>
   <td> 
- <select name="ms">
+ <select name="mstatus" value= "<?php if(isset($h)) echo $h ?>">
  <option>
  		-Please Select
  	</option>
  	<option>
- 		Male
+ 		Single
  	</option>
- 	<option>Female</option>
+ 	<option>Married</option>
+	 <option>Divorced</option>
+	 <option>widowed</option>
+	 
  	
  </select>
   </td>
@@ -197,20 +136,20 @@ echo $e. '<p>';
 	<table width="100%">
 		<tr>
 			<td width="12%">Contact Address</td>
-			<td><input type="text" size="60"></td>
+			<td><input type="text" name="address1" value= "<?php if(isset($i)) echo $i ?>" size="60"></td>
 		</tr>
 	</table>
 	<table width="100%">
 		<tr>
 			<td width="12%">Contact Address2 </td>
-			<td><input type="text" size="60"></td>
+			<td><input type="text" name="address2" value= "<?php if(isset($j)) echo $j ?>" size="60"></td>
 		</tr>
 	</table>
 	
 	<table width="100%">
 		<tr>
 			<td width="12%">State of Origin</td>
-			<td><input type="text"></td>
+			<td><input type="text" name="state" value= "<?php if(isset($k)) echo $k ?>"></td>
 	
 			
 		</tr>
@@ -225,27 +164,27 @@ echo $e. '<p>';
 	
 	<table>
 		<tr><td>Guardian/Next Of Kin:</td>
-			<td><input type="text"></td>
+			<td><input type="text" name="nok" value= "<?php if(isset($l)) echo $l ?>"></td>
 		</tr>
 	</table>
 	<table>
 		<tr>
 			<td>Relationship to Guardian/Next of Kin:</td>
-			<td><input type="text"></td>
+			<td><input type="text" name="nokr" value= "<?php if(isset($m)) echo $m ?>"></td>
 			<td>Occupation:</td>
-			<td><input type="text"></td>
+			<td><input type="text" name="occupation" value= "<?php if(isset($n)) echo $n ?>"></td>
 		</tr>
 	</table>
 	<table>
 		<tr>
 			<td>Address Of Guardian/Next of Kin:</td>
-			<td><input type="text"></td>
+			<td><input type="text" name="address_nok" value= "<?php if(isset($o)) echo $o ?>"></td>
 		</tr>
 	</table>
 	<table>
 		<tr>
 			<td>Phone No. Of Guardian/Next of Kin:</td>
-			<td><input type="tex"></td> 
+			<td><input type="tex" name="phone_nok" value= "<?php if(isset($p)) echo $p ?>"></td> 
 			 
 			
 		</tr>
@@ -267,17 +206,18 @@ echo $e. '<p>';
 	<table>
 		<tr>
 			
-			<textarea rows="10" cols="50"></textarea>
+			<textarea rows="10" cols="50" name="about" ></textarea>
 		</tr>
 	</table>
 	<table width="100%">
 		<tr>
 			<td>Registration Step4 <hr style="color: red"></td>
+			
 		</tr>
 	</table>
 	<table>
 		<tr>
-			<td><input type="radio"> I agree that all the information provided above is accurate. I have read and understood the rules and regulations set forth by the Miss 042 Pageant committee and agree to abide by them.
+			<td><input type="checkbox" value="yes" name="agree" checked> I agree that all the information provided above is accurate. I have read and understood the rules and regulations set forth by the Miss 042 Pageant committee and agree to abide by them.
 I further agree to abide by the rules regulation set forth the Miss 042 Pageant committee. I will accept the decision of the judges as final and binding, and I understand that such decisions are not questionable.
 
 I hereby consent that the organisers of the Miss 042 Pageant reserve the right to use all information; person or general, text, images submitted by me before or during the pageant in any medium, print or electronic in the advancement of The Miss 042 Pageant.
