@@ -206,7 +206,7 @@ $a = $_POST['teller'];
 	<table>
 		<tr>
 			
-			<textarea rows="10" cols="50" name="about" ></textarea>
+			<textarea rows="10" cols="50" name="about" value= "<?php if(isset($q)) echo $q ?>"></textarea>
 		</tr>
 	</table>
 	<table width="100%">
