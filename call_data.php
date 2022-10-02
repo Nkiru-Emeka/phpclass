@@ -57,8 +57,8 @@ $sn= 1;
             <td><?php echo $teller[$s] ?></td>
             <td><?php echo $lastname[$s]. ' '. $firstname[$s] ?></td>
             <td>Edit</td>
-            <td><a href="call_data.php?id=<?php echo $id[$s]?>">Delete</a></td>
-            <td>View</td>
+            <td onclick="return confirm ('Are you sure to delete?')"><a href="call_data.php?id=<?php echo $id[$s]?>">Delete</a></td>
+            <td><a href="view.php?id=<?php echo $id[$s] ?>">view</a></td>
         </tr>
         <?php  } ?>
     </table>
