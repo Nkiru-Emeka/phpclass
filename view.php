@@ -47,6 +47,7 @@ $address1= $row["address1"];
 <td width= "180">middlename</td>
 <td width= "100">lastname</td>
 <td width= "170">Marital Status</td>
+<td width= "300">Name</td>
 </tr>
 <tr>
 <td></td>
@@ -56,6 +57,7 @@ $address1= $row["address1"];
 <td><?php echo $middlename ?></td>
 <td><?php echo $lastname ?></td>
 <td><?php echo $mstatus?></td>
+<td><?php echo $firstname. ' '. $middlename. ' '. $lastname ?></td>
 </tr>
 
 </table>
