@@ -46,6 +46,15 @@ $query1= "create table if not exists profile (
         create pegant".mysqli_error($connect));
         if($query2) {echo "pegant created"."</br>";}
 
+        $query3= "create table if not exists admin (
+            id int not null primary key auto_increment,
+            username varchar (255) not null,
+            password varchar (255) not null
+            
+            )";
+            mysqli_query($connect, "$query3") or die ('could not create
+            admin'.mysqli_error($connect));
+            if($query3) {echo "successful.</br";}
 
 
 
