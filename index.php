@@ -1,4 +1,7 @@
 <?php
+if(isset($_COOKIE["oka"]))$user=$_COOKIE["oka"];else
+header("location:login_mysqli_password_verifired.php");
+
 include ("connect.php");
 if (isset($_POST['submit'])){
 $a = $_POST['teller'];
@@ -39,6 +42,10 @@ $a = $_POST['teller'];
 </head>
 
 <body>
+<h1>
+			<?php if(isset ($user)) {echo $user. 'Welcom';}
+			?>
+		</h1>
 	<table  width="100%" height="100" bgcolor="white">
 <tr align="center">
 	<td width="100"> <font size="+3" color="#3D3BD1" font style="Tahoma">MISS 042 PEGENT</font></td>
@@ -242,6 +249,9 @@ I hereby consent that the organisers of the Miss 042 Pageant reserve the right t
 			</td>
 		</tr>
 	</table>
+	<p>
+		<a href="logout.php">Log Out</a>
+	</p>
 	<?php
 	require ("array.php")?>
 </body>
