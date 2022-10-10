@@ -54,7 +54,7 @@ $query1= "create table if not exists profile (
             )";
             mysqli_query($connect, "$query3") or die ('could not create
             admin'.mysqli_error($connect));
-            if($query3) {echo "successful.</br";}
+            if($query3) {echo " admin table created successfully.</br";}
 
 
 
