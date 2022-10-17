@@ -1,4 +1,6 @@
 <?php
+include ("connect.php");
+
 //if(isset($_COOKIE["oka"]))$user=$_COOKIE["oka"];else header("location:login_mysqli_password varified.php");
 
 
@@ -138,6 +140,19 @@ for ($i = 0; $i < 200; $i++) {
 <h1><?php if(isset($user)) {echo $user. ' Welcome '; } ?></h1>
 <a href="logout.php">Log out</a>
 
+<?php if(isset($_COOKIE["oka"]))
+{
+	$cookie = $_COOKIE["oka"];
+	$query2 = "select * from admin where username = '$cookie'";
+	$result2 = mysqli_query($connect,$query2) or die(mysqli_error($connect));
+	while($row=mysqli_fetch_assoc($result2))
+	{
+		$user = $row["username"];
+		
+	}
+?>
+
+
 <?php
 	if(isset($_POST['submit'])){
 		$a= $_POST['a'];
@@ -149,6 +164,10 @@ for ($i = 0; $i < 200; $i++) {
 		
 	}
 	
+}
+
+else {
+	echo 'Makke sure you log i touse this form';}
 ?>
 <p>Almighty Formular</p>
 <form method="post">
