@@ -31,27 +31,27 @@ if(isset($_POST['submit']))
 <form action="" method="post" enctype="multipart/form-data">
 <p>
 
-<input name="surname" type="text" id="surname" placeholder="surname" value="<?php
-if(isset($a)) {echo $a;}?>" />
+<div class="row">Surname  <input name="surname" type="text" id="surname" placeholder="surname" value="<?php
+if(isset($a)) {echo $a;}?>" /> </div>
 </p>
 
 <p>
-    <input type="text" name="firstname" value="<?php
-if(isset($b)) {echo $b;}?>" placeholder="firstname">
+  <div class="roe"> Firstname  <input type="text" name="firstname" value="<?php
+if(isset($b)) {echo $b;}?>" placeholder="firstname"> </div>
 </p>
 
 <p>
-    <input type="text" name="degree" value="<?php if(isset($d)) echo $d ;?>" placeholder="degree">
+    <div class="col">Degree <input type="text" name="degree" value="<?php if(isset($d)) echo $d ;?>" placeholder="input your degree"></div>
 </p>
 
 <?php $marriage= array('select-!', 'single', 'married', 'Divorced', 'widowed');?>
-<select name="marriage" id="marriage">
+<div class="select"> Select Marital status  <select name="marriage" id="marriage">
 <?php for ($t=0; $t<count($marriage); $t++) {?>
 <option <?php if (isset($c)) if($c==$marriage[$t]) echo 'selected="selected"'; ?>><?php echo $marriage [$t];?></option>
 <?php }?>
-</select>
+</select> </div>
 <p>
-<textarea name="about" id="about"><?php if (isset($e)) echo $e ?></textarea>
+<div class="about"> About You   <textarea name="about" id="about"><?php if (isset($e)) echo $e ?></textarea> </div>
 </p>
 
 <p>

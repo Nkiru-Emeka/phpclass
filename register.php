@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
     $user= $_POST['username'];
     $pass1=$_POST['password'];
     $cpass=$_POST['cpassword'];
-    //to harsh the pass if cpass is equal to pass1
+    //to hash the pass if cpass is equal to pass1
     if($cpass==$pass1){
         $pass= password_hash($pass1,PASSWORD_DEFAULT);
 
