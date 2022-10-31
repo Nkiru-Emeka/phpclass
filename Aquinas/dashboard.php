@@ -1,3 +1,15 @@
+<?php
+include "connect1.php";
+if(isset($_POST['submit']))
+{
+    $zone= $_POST['name'];
+    $sign= mysqli_query ($connect1, "insert into zone (name) values('$zone')")  or die('could not insert'.mysqli_error($connect));
+            if($sign) {echo 'registered';}
+
+}
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +19,14 @@
     <title>Document</title>
 </head>
 <body>
-    peace
+    Welecome to St Thomas Aquinas Chaplaincy Portal
+   <container 
+    <div class="row">
+        <form method="post">
+        <div class="col">Create Zone<input type="text" name="name"></div>
+        <div class="col"><input type="submit" name="submit" class="btn btn-primary"></div>
+        </form>
+    </div>
+    
 </body>
 </html>

@@ -29,7 +29,7 @@
 
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
-	<a class="navbar-brand navbar_margin" href="#"><img src="images/logo3.jpg" width="100px" height="60px"</a>
+	<a class="navbar-brand navbar_margin" href="#"><img src="images/logo3.jpg" width="100px" height="60px"></a>
 	
 	
 </nav>
