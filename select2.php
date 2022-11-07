@@ -1,5 +1,5 @@
 <?php
- include ("connect db with mysqli.php");
+ include ("connect.php");
 
 if(isset($_GET['id']))
  {
