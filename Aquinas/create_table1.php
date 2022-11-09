@@ -26,4 +26,17 @@ $query1= "create table if not exists income (
         mysqli_query($connect1, "$query2") or die("could not 
         create profile".mysqli_error($connect1));
         if($query2) {echo "profile zone successfully created"."</br>";}
+
+        $query3= "create table if not exists member (
+            id int primary key not null auto_increment,
+            membername varchar(255);
+            memberzone varchar(255);
+            memberphone varchar(255)
+            
+        
+            )";
+        
+            mysqli_query($connect1, "$query3") or die("could not 
+            create member table".mysqli_error($connect1));
+            if($query3) {echo "member table successfully created"."</br>";}
 ?>
