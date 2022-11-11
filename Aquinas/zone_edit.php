@@ -50,7 +50,7 @@ $a = $_POST['name'];
     <title>Document</title>
 </head>
 <body>
-    Welecome to St Thomas Aquinas Chaplaincy Portal
+    St Thomas Aquimas Zones
    <container 
     <div class="row">
         <form method="post">
