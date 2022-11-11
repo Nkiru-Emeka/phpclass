@@ -29,9 +29,13 @@ $query1= "create table if not exists income (
 
         $query3= "create table if not exists member (
             id int primary key not null auto_increment,
-            membername varchar(255);
-            memberzone varchar(255);
-            memberphone varchar(255)
+            membername varchar(255) not null,
+            memberzone varchar(255)not null,
+            memberaddr varchar(255) not null,
+            memberphone varchar(255) not null,
+            memberemail varchar(255) not null,
+            membership_no varchar(255) not null,
+            date datetime
             
         
             )";
