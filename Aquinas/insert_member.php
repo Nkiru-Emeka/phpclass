@@ -15,7 +15,7 @@ include ("connect1.php");
 if(isset($_POST['submit']))
 {
     $a= strtoupper ($_POST['membername']);
-    $b= $_POST['memberzone'];
+    $b= $_POST['zone'];
     $c= $_POST['memberadd'];
     $d= $_POST['memberphone'];
     $e= $_POST['memberemail'];
@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
 <form action="" method="post" enctype="multipart/form-data">
 <p>
 
-<div class="row">Name of Member <input name="membername" type="text" id="membername" placeholder="insert member name" value="<?php
+<div class="row">Name of Member <input name="membername" type="text" id="membername" placeholder="insert full name" value="<?php
 if(isset($a)) {echo $a;}?>" /> </div>
 </p>
 
@@ -44,15 +44,17 @@ if(isset($a)) {echo $a;}?>" /> </div>
 </select> </div>
 
 <p>
-    <div class="col">Address <input type="text" name="memeberadd" value="<?php if(isset($d)) echo $d ;?>" placeholder="input your address"></div>
+    <div class="col">Address <input type="text" name="memberadd" value="<?php if(isset($d)) echo $d ;?>" placeholder="input address"></div>
 </p>
 <p>
-    <div class="col">Phone <input type="text" name="memeberphone" value="<?php if(isset($d)) echo $e ;?>" placeholder="phone no"></div>
+    <div class="col">Phone <input type="text" name="memberphone" value="<?php if(isset($d)) echo $e ;?>" placeholder="phone no"></div>
 </p>
 <p>
-    <div class="col">Membership No <input type="text" name="memebership_no" value="<?php if(isset($d)) echo $f ;?>" placeholder="Input your Zone Id"></div>
+    <div class="col">Membership No <input type="text" name="membership_no" value="<?php if(isset($d)) echo $f ;?>" placeholder="Input your Zone "></div>
 </p>
-
+<p>
+    <div class="col">Membership email <input type="text" name="memberemail" value="<?php if(isset($d)) echo $f ;?>" placeholder="Input your email "></div>
+</p>
 
 <p>
 <label>
