@@ -65,7 +65,7 @@ if(isset($_POST['submit']))
         if($num>0)
         {
             setcookie("oka", $id,time()+3600);
-            header("location:dashboard.php");
+            header("location:register.php");
         }
     
 }
