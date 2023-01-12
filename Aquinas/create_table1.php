@@ -72,4 +72,58 @@ $query1= "create table if not exists income (
                 create member_movement table".mysqli_error($connect1));
                 if($query5) {echo "member_return table successfully created"."</br>";}
 
+
+
+                $query6= "create table if not exists admin (
+                    id int primary key not null auto_increment,
+                    username varchar(255),
+                    password varchar(255)
+                   
+                
+                    )";
+                
+                    mysqli_query($connect1, "$query6") or die("could not 
+                    create profile".mysqli_error($connect1));
+                    if($query1) {echo "profile successfully created"."</br>";}
+                
+                   // $insert= mysqli_query($connect1,"insert into admin values ('1','admin','churchwork')") or die("could not insert".mysqli_error($connect));
+                   // if($insert) echo 'admin has been inserted';
+
+                   $query7= "create table if not exists project (
+                    id int primary key not null auto_increment,
+                    projectname varchar(255)
+                    
+                
+                    )";
+                
+                    mysqli_query($connect1, "$query7") or die("could not 
+                    create profile".mysqli_error($connect1));
+                    if($query7) {echo "project successfully created"."</br>";}
+
+                    $query7= "create table if not exists project (
+                    id int primary key not null auto_increment,
+                    projectname varchar(255)
+                    
+                
+                    )";
+                
+                    mysqli_query($connect1, "$query7") or die("could not 
+                    create proect table".mysqli_error($connect1));
+                    if($query7) {echo "project successfully created"."</br>";}
+
+                    $query8= "create table if not exists revenue (
+                        id int primary key not null auto_increment,
+                        memberid varchar(255),
+                        projectid varchar(255),
+                        amount varchar(255),
+                        project_date varchar(255),
+                        payment_date varchar(255)
+                        
+                    
+                        )";
+                    
+                        mysqli_query($connect1, "$query8") or die("could not 
+                        create revenue table".mysqli_error($connect1));
+                        if($query8) {echo "Revenue Table successfully created"."</br>";}
+
 ?>

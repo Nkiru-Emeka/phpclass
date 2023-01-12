@@ -28,7 +28,7 @@ if(mysqli_num_rows($resultA)>$count){
 if(isset($_POST['submit']))
 {
     $a= mysqli_real_escape_string($connect1,strtoupper ($_POST['membername']));
-    $b= mysqli_real_escape_string($connect1,$_POST['zone']);
+    $b= mysqli_real_escape_string($connect1,$_POST['memberzone']);
     $c= $_POST['memberadd'];
     $d= $_POST['memberphone'];
     $e= $_POST['email'];
