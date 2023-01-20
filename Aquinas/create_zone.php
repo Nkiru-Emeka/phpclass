@@ -4,7 +4,7 @@ if(isset($_POST['submit']))
 {
     $zone= $_POST['name'];
     $sign= mysqli_query ($connect1, "insert into zone (name) values('$zone')")  or die('could not insert'.mysqli_error($connect));
-            if($sign) {echo 'registered';}
+            if($sign) {echo 'Zone created successfully';}
 
 }
 

@@ -67,7 +67,7 @@ $sn= 1;
         <tr>
             <td width="40">SN</td>
             <td width="85">Member Name </td>
-            <td width="85">Pledges Made</td>
+            <td width="85">Make Pledge</td>
             
             </tr>
         <?php for($s=0; $s<$count;$s++) {?>
@@ -75,7 +75,7 @@ $sn= 1;
             <td><?php echo $sn++ ?></td>
             <td><?php echo $membername[$s] ?></td>
             
-            <td><a href="view_pledge.php?id=<?php echo $id[$s] ?>">View Pledge </a></td>
+            <td><a href="create_pledge.php?id=<?php echo $id[$s] ?>">Make Pledge </a></td>
            
         </tr>
         <?php  } ?>
