@@ -93,7 +93,7 @@ echo $projectname;
 </td>
 <td><?php echo $amount[$x] ?></td>
 <td><?php echo $project_date [$x]?></td>
-
+<td><a href="makepay?id=<?php echo $id2[$x] ?>&member_id=<?php echo $a?>"> make payment</a></td>
 </tr>
 <?php }?>
 </table>
