@@ -123,6 +123,6 @@ $query1= "create table if not exists income (
                     
                         mysqli_query($connect1, "$query8") or die("could not 
                         create pledge table".mysqli_error($connect1));
-                        if($query8) {echo "Pledge Table successfully created"."</br>";}
+                        if($query8) {echo "Payment Table successfully created"."</br>";}
 
 ?>
