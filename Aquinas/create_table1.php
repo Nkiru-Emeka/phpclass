@@ -131,6 +131,7 @@ $query1= "create table if not exists income (
                             memberid varchar(255),
                             pledgeid varchar(255),
                             amount_pledged varchar(255),
+                            amount_paid varchar(255),
                             project_date varchar(255),
                             payment_date varchar(255)
                                                     
