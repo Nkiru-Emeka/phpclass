@@ -31,6 +31,7 @@ if(isset($_POST['submit']))
     $b= mysqli_real_escape_string($connect1,$_POST['projectid']);
     $c= $_POST['amount'];
     $d= $_POST['project_date'];
+  
        // $reg= rand(1000,2000);
    // $f= date('Y').'/'.'AQ'.'/'.$reg;
 
@@ -51,8 +52,10 @@ if(isset($_POST['submit']))
         </select> </div>
 
 <p>
-    <div class="col">Amount <input type="text" name="amount" value="<?php if(isset($c)) echo $c ;?>" placeholder="input amount"></div>
+    <div class="col">Amount <input type="number" required name="amount" value="<?php if(isset($c)) echo $c ;?>" placeholder="amount pledged"></div>
 </p>
+
+
 <p>
     <div class="col">Project Date <input type="date" name="project_date" value="<?php if(isset($d)) echo $d ;?>" placeholder="Date of Project"></div>
 </p>

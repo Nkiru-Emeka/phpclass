@@ -125,4 +125,24 @@ $query1= "create table if not exists income (
                         create pledge table".mysqli_error($connect1));
                         if($query8) {echo "Payment Table successfully created"."</br>";}
 
+
+                        $query9= "create table if not exists payment (
+                            id int primary key not null auto_increment,
+                            memberid varchar(255),
+                            pledgeid varchar(255),
+                            amount_pledged varchar(255),
+                            amount_paid varchar(255),
+                            project_date varchar(255),
+                            payment_date varchar(255)
+                                                    
+                        
+                            )";
+                        
+                            mysqli_query($connect1, "$query9") or die("could not 
+                            create payment table".mysqli_error($connect1));
+                            if($query9) {echo "Payment Table successfully created"."</br>";}
+
+
+                        
+
 ?>

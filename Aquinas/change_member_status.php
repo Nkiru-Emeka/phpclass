@@ -21,10 +21,27 @@ if(isset($_POST['submit']))
     
     $c= $_POST['status'];
     $d= $_POST['date_move'];
-
+    $k= date('Y-m-d');
+    /*echo $d;
+    echo "<br/>";
+    echo $k;*/
+    if($d>$k){
+        $update = mysqli_query($connect1, "update member
+        set status = '$c'
+        where id = '$eze'") or die ('could mot update'.mysqli_error($connect1));
+    
+        $insert= mysqli_query($connect1, "insert into member_movement 
+        (member_id, date_move)
+        values ('$eze', '$d')") or die ('could mot 
+        insert'.mysqli_error($connect1));
+        if ($insert) {echo 'member moved succefully';}
+    }  
+else{
+    echo "choose correct date";
+}
     
 
-    $update = mysqli_query($connect1, "update member
+   /* $update = mysqli_query($connect1, "update member
     set status = '$c'
     where id = '$eze'") or die ('could mot update'.mysqli_error($connect1));
 
@@ -32,7 +49,7 @@ if(isset($_POST['submit']))
     (member_id, date_move)
     values ('$eze', '$d')") or die ('could mot 
     insert'.mysqli_error($connect1));
-    if ($insert) {echo 'member moved succefully';}
+    if ($insert) {echo 'member moved succefully';} */
 }
 ?>
 
