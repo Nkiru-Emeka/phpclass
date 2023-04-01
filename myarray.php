@@ -3,6 +3,8 @@
 $number = array(1,2,3,4,5);
 foreach($number as $value)
 {
+    
+    /*echo "This is the result on how to create Numeric Array". "<br/>";*/
     echo "The result is $value <br/>";
 }
 
@@ -14,6 +16,7 @@ $numbers[3]="Four";
 $numbers[4]="Five";
 foreach($numbers as $value)
 {
+    /*echo "This is the result on how to create Numeric Array". "<br/>";*/
     echo "The result is $value <br/>";
 }
 
@@ -24,6 +27,7 @@ $salary= array(
     "rita"=>1000,
     "grace"=>500,
 );
+    echo "This is the result on how to create Associate Array". "<br/>";
     echo "salary of Chime is ". $salary['chime']. "<br/>";
     echo "salary of Rita is ". $salary['rita']. "<br/>";
     echo "salary of Grace is ". $salary['grace']. "<br/>";
